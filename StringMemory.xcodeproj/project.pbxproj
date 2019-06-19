@@ -40,6 +40,7 @@
 		4B9A4CA322BA6F23005F29FF /* StringMemoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StringMemoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9A4CA722BA6F23005F29FF /* StringMemoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringMemoryTests.m; sourceTree = "<group>"; };
 		4B9A4CA922BA6F23005F29FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B9A4CB222BA8122005F29FF /* CoreFoundationInternals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreFoundationInternals.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				4B9A4C8E22BA6F22005F29FF /* AppDelegate.h */,
+				4B9A4CB222BA8122005F29FF /* CoreFoundationInternals.h */,
 				4B9A4C8F22BA6F22005F29FF /* AppDelegate.m */,
 				4B9A4C9122BA6F22005F29FF /* ViewController.h */,
 				4B9A4C9222BA6F22005F29FF /* ViewController.m */,
