@@ -8,6 +8,33 @@
 
 #import "AppDelegate.h"
 
+typedef struct __CFRuntimeBase {
+    // This matches the isa and retain count storage in Swift
+    uintptr_t _cfisa;
+    uintptr_t _swift_rc;
+    // This is for CF's use, and must match __NSCFType/_CFInfo layout
+    _Atomic(uint64_t) _cfinfoa;
+} CFRuntimeBase;
+
+struct __CFString {
+    CFRuntimeBase base;
+    union {    // In many cases the allocated structs are smaller than these
+        struct __inline1 {
+            CFIndex length;
+        } inline1;                                      // Bytes follow the length
+        struct __notInlineImmutable1 {
+            void *buffer;                               // Note that the buffer is in the same place for all non-inline variants of CFString
+            CFIndex length;
+            CFAllocatorRef contentsDeallocator;        // Optional; just the dealloc func is used
+        } notInlineImmutable1;                          // This is the usual not-inline immutable CFString
+        struct __notInlineImmutable2 {
+            void *buffer;
+            CFAllocatorRef contentsDeallocator;        // Optional; just the dealloc func is used
+        } notInlineImmutable2;                          // This is the not-inline immutable CFString when length is stored with the contents (first byte)
+        //        struct __notInlineMutable notInlineMutable;
+    } variants;
+};
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +44,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSString *testString = @"test";
+    CFStringRef cfString = (__bridge CFStringRef)testString;
+    CFRuntimeBase theBase = cfString->base;
+    NSLog(@"theBase");
+
     return YES;
 }
 

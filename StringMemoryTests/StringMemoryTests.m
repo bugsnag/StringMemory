@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <CoreFoundation/CoreFoundation.h>
+
 
 @interface StringMemoryTests : XCTestCase
 
@@ -23,6 +25,12 @@
 }
 
 - (void)testExample {
+    NSString *testString = @"test";
+    CFStringRef cfString = (__bridge CFStringRef)testString;
+    CFRuntimeBase theBase = cfString->base;
+    NSLog(@"theBase");
+//    XCTAssertTrue(theBase != 0);
+    
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
