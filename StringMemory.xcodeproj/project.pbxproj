@@ -41,6 +41,7 @@
 		4B9A4CA722BA6F23005F29FF /* StringMemoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringMemoryTests.m; sourceTree = "<group>"; };
 		4B9A4CA922BA6F23005F29FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B9A4CB222BA8122005F29FF /* CoreFoundationInternals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreFoundationInternals.h; sourceTree = "<group>"; };
+		4BE14BB322BB8A8A00BFE957 /* .travis.yml */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = .travis.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,7 @@
 		4B9A4C8222BA6F22005F29FF = {
 			isa = PBXGroup;
 			children = (
+				4BE14BB322BB8A8A00BFE957 /* .travis.yml */,
 				4B9A4C8D22BA6F22005F29FF /* StringMemory */,
 				4B9A4CA622BA6F23005F29FF /* StringMemoryTests */,
 				4B9A4C8C22BA6F22005F29FF /* Products */,
