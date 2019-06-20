@@ -10,6 +10,6 @@ env:
   - XCODE_DESNITATION='platform=iOS Simulator,name=iPhone SE,OS=10.3.1'
   - XCODE_DESNITATION='platform=iOS Simulator,name=iPhone 6s,OS=9.3'
 script:
-  - set -o pipefail && xcodebuild test -scheme "$TRAVIS_XCODE_SCHEME" -destination "$XCODE_DESNITATION" | xcpretty -f `xcpretty-travis-formatter`
+  - set -o pipefail && xcodebuild test -scheme "$TRAVIS_XCODE_SCHEME" -destination "$XCODE_DESNITATION" | xcpretty -f `bundle exec xcpretty-travis-formatter`
 before_install:
   - gem install bundler
