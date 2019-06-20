@@ -1,14 +1,15 @@
 language: objective-c
 xcode_scheme: StringMemory
 rvm: 2.4.3
-matrix:
-    include:
-        - osx_image: xcode9.4
-        - osx_image: xcode10.1
-        - osx_image: xcode10.2
+osx_image:
+  - xcode9.4
+  - xcode10.1
+  - xcode10.2
 env:
   - XCODE_DESNITATION='platform=iOS Simulator,name=iPhone SE'
   - XCODE_DESNITATION='platform=iOS Simulator,name=iPhone SE,OS=10.3.1'
   - XCODE_DESNITATION='platform=iOS Simulator,name=iPhone 6s,OS=9.3'
 script:
   - set -o pipefail && xcodebuild test -scheme "$TRAVIS_XCODE_SCHEME" -destination "$XCODE_DESNITATION" | xcpretty -f `xcpretty-travis-formatter`
+before_install:
+  - gem install bundler
