@@ -1,15 +1,18 @@
 language: objective-c
-xcode_scheme: StringMemory
+xcode_scheme: Universal
 rvm: 2.4.3
+cache: bundler
 osx_image:
   - xcode10.2
   - xcode10.1
   - xcode9.4
 env:
+  - XCODE_DESNITATION='platform=macOS'
+  - XCODE_DESNITATION='platform=tvOS Simulator,name=Apple TV'
   - XCODE_DESNITATION='platform=iOS Simulator,name=iPhone SE'
   - XCODE_DESNITATION='platform=iOS Simulator,name=iPhone SE,OS=10.3.1'
   - XCODE_DESNITATION='platform=iOS Simulator,name=iPhone 6s,OS=9.3'
 script:
   - set -o pipefail && xcodebuild test -scheme "$TRAVIS_XCODE_SCHEME" -destination "$XCODE_DESNITATION" | bundle exec xcpretty -f `bundle exec xcpretty-travis-formatter`
 before_install:
-  - gem install bundler
+  - gem install bundler # to use bundler v2 which is not installed on travis image
