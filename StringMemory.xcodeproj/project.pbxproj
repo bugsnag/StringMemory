@@ -22,14 +22,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4B9A4CA422BA6F23005F29FF /* PBXContainerItemProxy */ = {
+		4B9BDCD222BD86D8009FD96B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4B9A4C8322BA6F22005F29FF /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4B9A4C8A22BA6F22005F29FF;
-			remoteInfo = StringMemory;
+			remoteGlobalIDString = 4B9BDCCC22BD86D8009FD96B;
+			remoteInfo = Universal;
 		};
-		4B9BDCD222BD86D8009FD96B /* PBXContainerItemProxy */ = {
+		4B9BDCE022BD930E009FD96B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4B9A4C8322BA6F22005F29FF /* Project object */;
 			proxyType = 1;
@@ -109,6 +109,7 @@
 				4B9A4CA622BA6F23005F29FF /* StringMemoryTests */,
 				4B9BDCCE22BD86D8009FD96B /* Universal */,
 				4B9A4C8C22BA6F22005F29FF /* Products */,
+				4B9BDCDE22BD92FF009FD96B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +160,13 @@
 			path = Universal;
 			sourceTree = "<group>";
 		};
+		4B9BDCDE22BD92FF009FD96B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -204,7 +212,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				4B9A4CA522BA6F23005F29FF /* PBXTargetDependency */,
+				4B9BDCE122BD930E009FD96B /* PBXTargetDependency */,
 			);
 			name = StringMemoryTests;
 			productName = StringMemoryTests;
@@ -326,15 +334,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4B9A4CA522BA6F23005F29FF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4B9A4C8A22BA6F22005F29FF /* StringMemory */;
-			targetProxy = 4B9A4CA422BA6F23005F29FF /* PBXContainerItemProxy */;
-		};
 		4B9BDCD322BD86D8009FD96B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4B9BDCCC22BD86D8009FD96B /* Universal */;
 			targetProxy = 4B9BDCD222BD86D8009FD96B /* PBXContainerItemProxy */;
+		};
+		4B9BDCE122BD930E009FD96B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B9BDCCC22BD86D8009FD96B /* Universal */;
+			targetProxy = 4B9BDCE022BD930E009FD96B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -508,32 +516,40 @@
 		4B9A4CB022BA6F23005F29FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 372ZUL2ZB7;
 				INFOPLIST_FILE = StringMemoryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsnag.StringMemoryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macos watchsimulator watchos appletvos appletvsimulator macosx";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
 			};
 			name = Debug;
 		};
 		4B9A4CB122BA6F23005F29FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 372ZUL2ZB7;
 				INFOPLIST_FILE = StringMemoryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsnag.StringMemoryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macos watchsimulator watchos appletvos appletvsimulator macosx";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
 			};
 			name = Release;
 		};
@@ -556,6 +572,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsnag.Universal;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -563,6 +580,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
 			};
 			name = Debug;
 		};
@@ -585,6 +603,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsnag.Universal;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -592,6 +611,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
 			};
 			name = Release;
 		};

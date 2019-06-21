@@ -6,7 +6,7 @@
 //  Copyright © 2019 Paul Zabelin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for Universal.
 FOUNDATION_EXPORT double UniversalVersionNumber;
