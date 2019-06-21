@@ -1,11 +1,14 @@
 language: objective-c
 xcode_scheme: Universal
-rvm: 2.4.3
 cache: bundler
-osx_image:
-  - xcode10.2
-  - xcode10.1
-  - xcode9.4
+matrix:
+  include:
+    - osx_image: xcode10.2
+      rvm: 2.4.5
+    - osx_image: xcode10.1
+      rvm: 2.4.5
+    - osx_image: xcode9.4
+      rvm: 2.4.3
 env:
   - XCODE_DESNITATION='platform=macOS'
   - XCODE_DESNITATION='platform=tvOS Simulator,name=Apple TV'
