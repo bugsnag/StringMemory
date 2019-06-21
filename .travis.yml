@@ -1,6 +1,5 @@
 language: objective-c
 xcode_scheme: Universal
-rvm: 2.4.3
 cache: bundler
 osx_image:
   - xcode10.2
