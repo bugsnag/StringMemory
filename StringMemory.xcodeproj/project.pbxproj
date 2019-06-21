@@ -17,6 +17,8 @@
 		4B9BDCD122BD86D8009FD96B /* Universal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B9BDCCF22BD86D8009FD96B /* Universal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B9BDCD422BD86D8009FD96B /* Universal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9BDCCD22BD86D8009FD96B /* Universal.framework */; };
 		4B9BDCD522BD86D8009FD96B /* Universal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9BDCCD22BD86D8009FD96B /* Universal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4B9BDCDC22BD88E8009FD96B /* SafeString.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B9BDCDA22BD88E8009FD96B /* SafeString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B9BDCDD22BD88E8009FD96B /* SafeString.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9BDCDB22BD88E8009FD96B /* SafeString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		4B9BDCCD22BD86D8009FD96B /* Universal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Universal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9BDCCF22BD86D8009FD96B /* Universal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Universal.h; sourceTree = "<group>"; };
 		4B9BDCD022BD86D8009FD96B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B9BDCDA22BD88E8009FD96B /* SafeString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SafeString.h; sourceTree = "<group>"; };
+		4B9BDCDB22BD88E8009FD96B /* SafeString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafeString.m; sourceTree = "<group>"; };
 		4BE14BB322BB8A8A00BFE957 /* .travis.yml */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = .travis.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				4B9A4C8E22BA6F22005F29FF /* AppDelegate.h */,
-				4B9A4CB222BA8122005F29FF /* CoreFoundationInternals.h */,
 				4B9A4C8F22BA6F22005F29FF /* AppDelegate.m */,
 				4B9A4C9122BA6F22005F29FF /* ViewController.h */,
 				4B9A4C9222BA6F22005F29FF /* ViewController.m */,
@@ -148,6 +151,9 @@
 			isa = PBXGroup;
 			children = (
 				4B9BDCCF22BD86D8009FD96B /* Universal.h */,
+				4B9A4CB222BA8122005F29FF /* CoreFoundationInternals.h */,
+				4B9BDCDA22BD88E8009FD96B /* SafeString.h */,
+				4B9BDCDB22BD88E8009FD96B /* SafeString.m */,
 				4B9BDCD022BD86D8009FD96B /* Info.plist */,
 			);
 			path = Universal;
@@ -160,6 +166,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B9BDCDC22BD88E8009FD96B /* SafeString.h in Headers */,
 				4B9BDCD122BD86D8009FD96B /* Universal.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,7 +243,6 @@
 					};
 					4B9A4CA222BA6F23005F29FF = {
 						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = 4B9A4C8A22BA6F22005F29FF;
 					};
 					4B9BDCCC22BD86D8009FD96B = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -313,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B9BDCDD22BD88E8009FD96B /* SafeString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,7 +508,6 @@
 		4B9A4CB022BA6F23005F29FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = StringMemoryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -512,14 +518,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsnag.StringMemoryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StringMemory.app/StringMemory";
 			};
 			name = Debug;
 		};
 		4B9A4CB122BA6F23005F29FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = StringMemoryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -530,7 +534,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsnag.StringMemoryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StringMemory.app/StringMemory";
 			};
 			name = Release;
 		};

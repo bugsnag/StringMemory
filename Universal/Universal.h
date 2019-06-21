@@ -15,5 +15,5 @@ FOUNDATION_EXPORT double UniversalVersionNumber;
 FOUNDATION_EXPORT const unsigned char UniversalVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <Universal/PublicHeader.h>
-
+#import <Universal/SafeString.h>
 

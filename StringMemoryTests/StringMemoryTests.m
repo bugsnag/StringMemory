@@ -9,7 +9,8 @@
 #import <XCTest/XCTest.h>
 #import <CoreFoundation/CoreFoundation.h>
 #import "CoreFoundationInternals.h"
-
+@import Universal;
+#import "Universal/SafeString.h"
 
 @interface StringMemoryTests : XCTestCase
 @end
@@ -18,10 +19,10 @@
 
 
 - (void)testExample {
+    
     NSString *testString = @"test";
     CFStringRef cfString = (__bridge CFStringRef)testString;
-    CFRuntimeBase theBase = cfString->base;
-    char *internalString = (char *)theBase._cfinfoa;
+    char *internalString = (char *)SafeStringContents(cfString);
     XCTAssertEqual(0, strcmp(internalString, "test"), @"internal Core Foundation pointer should point to the same C string");
     NSLog(@"internal string value is printable: %s", internalString);
 }
