@@ -528,7 +528,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsnag.StringMemoryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macos watchsimulator watchos appletvos appletvsimulator macosx";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,3";
 				WATCHOS_DEPLOYMENT_TARGET = 4.2;
 			};
 			name = Debug;
@@ -548,7 +548,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bugsnag.StringMemoryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macos watchsimulator watchos appletvos appletvsimulator macosx";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,3";
 				WATCHOS_DEPLOYMENT_TARGET = 4.2;
 			};
 			name = Release;
