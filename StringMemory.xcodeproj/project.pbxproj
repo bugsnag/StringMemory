@@ -55,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		4B64AEDC22BFAEFC0078C63B /* objc-internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "objc-internal.h"; sourceTree = "<group>"; };
+		4B64AEDE22BFB5940078C63B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4B9A4C8B22BA6F22005F29FF /* StringMemory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StringMemory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9A4C8E22BA6F22005F29FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4B9A4C8F22BA6F22005F29FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -114,11 +115,12 @@
 		4B9A4C8222BA6F22005F29FF = {
 			isa = PBXGroup;
 			children = (
-				4B64AEDB22BFAEFC0078C63B /* ThirdParty */,
 				4BE14BB322BB8A8A00BFE957 /* .travis.yml */,
+				4B64AEDE22BFB5940078C63B /* README.md */,
 				4B9A4C8D22BA6F22005F29FF /* StringMemory */,
 				4B9A4CA622BA6F23005F29FF /* StringMemoryTests */,
 				4B9BDCCE22BD86D8009FD96B /* Universal */,
+				4B64AEDB22BFAEFC0078C63B /* ThirdParty */,
 				4B9A4C8C22BA6F22005F29FF /* Products */,
 				4B9BDCDE22BD92FF009FD96B /* Frameworks */,
 			);
