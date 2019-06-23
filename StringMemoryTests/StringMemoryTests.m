@@ -15,6 +15,10 @@
 
 @implementation StringMemoryTests
 
+- (void)setUp {
+    initializeTagPointers();
+}
+
 - (void)test__NSCFConstantString {
     
     NSString *testString = @"test";
@@ -25,12 +29,20 @@
     XCTAssertEqualObjects(@"__NSCFConstantString", [testString className]);
 }
 
-- (void)XtestNSTaggedPointerString {
-    char* expected = "test";
+-(CFStringRef)createStringWithBytes:(char *)expected {
     int expectedLength = (int)strlen(expected);
-    CFStringRef stringPtr = CFStringCreateWithBytes(NULL, (uint8_t*)expected, expectedLength, kCFStringEncodingUTF8, FALSE);
+    return CFStringCreateWithBytes(NULL, (uint8_t*)expected, expectedLength, kCFStringEncodingUTF8, FALSE);
+}
+
+- (void)XtestNSTaggedPointerString {
+    CFStringRef stringPtr = [self createStringWithBytes:"test"];
     char *internalString = (char *)SafeStringContents(stringPtr);
     XCTAssertEqual(0, strcmp(internalString, "test"), @"internal Core Foundation pointer should point to the same C string");
+}
+
+- (void)testStringLength {
+    CFStringRef stringPtr = [self createStringWithBytes:"test"];
+    XCTAssertEqual(4, getTaggedStringLength(stringPtr));
 }
 
 NSString *pointerPattern = @"0x[0-9a-f]{9}";

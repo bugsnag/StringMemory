@@ -8,6 +8,8 @@
 
 @import CoreFoundation;
 
-const void * _Nonnull SafeStringContents(CFStringRef _Nonnull str);
+const void * _Nullable SafeStringContents(CFStringRef _Nonnull str);
+size_t getTaggedStringLength(const void * _Nonnull str);
 BOOL isTaggedPointer(const void * _Nullable ptr);
 BOOL taggedPointersEnabled(void);
+void initializeTagPointers(void);
