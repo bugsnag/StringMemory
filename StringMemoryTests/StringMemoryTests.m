@@ -49,6 +49,7 @@ NSString *taggedPointerPattern = @"0x[0-9a-f]{16}";
     } else {
         XCTAssertEqualObjects([taggedString ptrString], @"0xa000000000000611");
     }
+    XCTAssertTrue(isTaggedPointer((__bridge const void * _Nullable)(taggedString)));
 
     XCTAssertEqualObjects(@"NSTaggedPointerString", [taggedString className]);
 }

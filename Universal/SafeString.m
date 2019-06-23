@@ -10,8 +10,12 @@
 #import "CoreFoundationInternals.h"
 #import "objc-internal.h"
 
-const void * SafeStringContents(CFStringRef str) {
+const void * _Nonnull SafeStringContents(CFStringRef _Nonnull str) {
     CFRuntimeBase theBase = str->base;
     const void *internalString = (char *)theBase._cfinfoa;
     return internalString;
+}
+
+BOOL isTaggedPointer(const void * _Nullable ptr) {
+    return _objc_isTaggedPointer(ptr);
 }
