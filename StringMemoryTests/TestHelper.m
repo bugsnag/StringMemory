@@ -7,6 +7,7 @@
 //
 
 #import "TestHelper.h"
+@import ObjectiveC.runtime;
 
 @implementation NSString (RegExMatch)
 - (BOOL)matches:(NSString *)pattern {
@@ -22,6 +23,10 @@
 
 - (BOOL)ptrMatches:(NSString *)pattern {
     return [[self ptrString] matches:pattern];
+}
+
+- (NSString *)className {
+    return NSStringFromClass(object_getClass(self));
 }
 @end
 

@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface NSObject (RegExMatch)
+- (NSString *)className;
 - (NSString *)ptrString;
 - (BOOL)ptrMatches:(NSString *)pattern;
 @end
