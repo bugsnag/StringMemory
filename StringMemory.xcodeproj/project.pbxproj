@@ -59,6 +59,7 @@
 		4B64AEDE22BFB5940078C63B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4B64AEDF22BFC4200078C63B /* TestHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestHelper.h; sourceTree = "<group>"; };
 		4B64AEE022BFC4200078C63B /* TestHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestHelper.m; sourceTree = "<group>"; };
+		4B64AEE222BFC9F00078C63B /* Makefile */ = {isa = PBXFileReference; explicitFileType = text.script.sh; path = Makefile; sourceTree = "<group>"; };
 		4B9A4C8B22BA6F22005F29FF /* StringMemory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StringMemory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9A4C8E22BA6F22005F29FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4B9A4C8F22BA6F22005F29FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -119,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				4BE14BB322BB8A8A00BFE957 /* .travis.yml */,
+				4B64AEE222BFC9F00078C63B /* Makefile */,
 				4B64AEDE22BFB5940078C63B /* README.md */,
 				4B9A4C8D22BA6F22005F29FF /* StringMemory */,
 				4B9A4CA622BA6F23005F29FF /* StringMemoryTests */,
