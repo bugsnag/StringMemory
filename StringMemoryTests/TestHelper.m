@@ -31,6 +31,19 @@
 @end
 
 BOOL ios(NSInteger majorVersion) {
+#if TARGET_OS_IPHONE
     NSOperatingSystemVersion iosVersion = (NSOperatingSystemVersion){majorVersion, 0, 0};
     return [[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:iosVersion];
+#else
+    return NO;
+#endif
+}
+
+BOOL macos(NSInteger minorVersion) {
+#if TARGET_OS_OSX
+    NSOperatingSystemVersion osVersion = (NSOperatingSystemVersion){10, minorVersion, 0};
+    return [[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:osVersion];
+#else
+    return NO;
+#endif
 }

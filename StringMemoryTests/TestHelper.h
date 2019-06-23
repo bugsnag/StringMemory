@@ -21,3 +21,4 @@ NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_END
 
 BOOL ios(NSInteger majorVersion);
+BOOL macos(NSInteger minorVersion);

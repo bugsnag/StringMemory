@@ -43,7 +43,7 @@ NSString *taggedPointerPattern = @"0x[0-9a-f]{16}";
     NSLog(@"%p %p %@", constString, taggedString, [taggedString className]);
 
     XCTAssertTrue([constString ptrMatches:pointerPattern]);
-    if (ios(12)) {
+    if (ios(12) || macos(14)) {
         XCTAssertTrue([taggedString ptrMatches:taggedPointerPattern]);
         XCTAssertNotEqualObjects([taggedString ptrString], @"0xa000000000000611");
     } else {
