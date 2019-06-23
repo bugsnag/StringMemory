@@ -27,4 +27,12 @@
     NSLog(@"internal string value is printable: %s", internalString);
 }
 
+- (void)XtestNSTaggedPointerString {
+    char* expected = "test";
+    int expectedLength = (int)strlen(expected);
+    CFStringRef stringPtr = CFStringCreateWithBytes(NULL, (uint8_t*)expected, expectedLength, kCFStringEncodingUTF8, FALSE);
+    char *internalString = (char *)SafeStringContents(stringPtr);
+    XCTAssertEqual(0, strcmp(internalString, "test"), @"internal Core Foundation pointer should point to the same C string");
+}
+
 @end

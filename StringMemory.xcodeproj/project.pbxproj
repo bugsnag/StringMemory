@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B64AEDD22BFAEFC0078C63B /* objc-internal.h in Resources */ = {isa = PBXBuildFile; fileRef = 4B64AEDC22BFAEFC0078C63B /* objc-internal.h */; };
 		4B9A4C9022BA6F22005F29FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A4C8F22BA6F22005F29FF /* AppDelegate.m */; };
 		4B9A4C9322BA6F22005F29FF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A4C9222BA6F22005F29FF /* ViewController.m */; };
 		4B9A4C9622BA6F22005F29FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9A4C9422BA6F22005F29FF /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4B64AEDC22BFAEFC0078C63B /* objc-internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "objc-internal.h"; sourceTree = "<group>"; };
 		4B9A4C8B22BA6F22005F29FF /* StringMemory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StringMemory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9A4C8E22BA6F22005F29FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4B9A4C8F22BA6F22005F29FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -101,9 +103,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B64AEDB22BFAEFC0078C63B /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				4B64AEDC22BFAEFC0078C63B /* objc-internal.h */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
 		4B9A4C8222BA6F22005F29FF = {
 			isa = PBXGroup;
 			children = (
+				4B64AEDB22BFAEFC0078C63B /* ThirdParty */,
 				4BE14BB322BB8A8A00BFE957 /* .travis.yml */,
 				4B9A4C8D22BA6F22005F29FF /* StringMemory */,
 				4B9A4CA622BA6F23005F29FF /* StringMemoryTests */,
@@ -299,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B64AEDD22BFAEFC0078C63B /* objc-internal.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import "SafeString.h"
 #import "CoreFoundationInternals.h"
+#import "objc-internal.h"
 
 const void * SafeStringContents(CFStringRef str) {
     CFRuntimeBase theBase = str->base;
