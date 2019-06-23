@@ -46,9 +46,15 @@ NSString *taggedPointerPattern = @"0x[0-9a-f]{16}";
     if (ios(12) || macos(14)) {
         XCTAssertTrue([taggedString ptrMatches:taggedPointerPattern]);
         XCTAssertNotEqualObjects([taggedString ptrString], @"0xa000000000000611");
+        XCTAssertNotEqualObjects([taggedString ptrString], @"0x6115");
     } else {
-        XCTAssertEqualObjects([taggedString ptrString], @"0xa000000000000611");
+        #if TARGET_OS_OSX
+                XCTAssertEqualObjects([taggedString ptrString], @"0x6115");
+        #else
+                XCTAssertEqualObjects([taggedString ptrString], @"0xa000000000000611");
+        #endif
     }
+    XCTAssertTrue(taggedPointersEnabled());
     XCTAssertTrue(isTaggedPointer((__bridge const void * _Nullable)(taggedString)));
 
     XCTAssertEqualObjects(@"NSTaggedPointerString", [taggedString className]);

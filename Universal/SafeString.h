@@ -10,3 +10,4 @@
 
 const void * _Nonnull SafeStringContents(CFStringRef _Nonnull str);
 BOOL isTaggedPointer(const void * _Nullable ptr);
+BOOL taggedPointersEnabled(void);

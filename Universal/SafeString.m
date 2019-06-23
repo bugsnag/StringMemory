@@ -16,6 +16,12 @@ const void * _Nonnull SafeStringContents(CFStringRef _Nonnull str) {
     return internalString;
 }
 
+BOOL taggedPointersEnabled() {
+    extern uintptr_t objc_debug_taggedpointer_mask;
+    extern uintptr_t objc_debug_taggedpointer_obfuscator;
+    return _objc_taggedPointersEnabled();
+}
+
 BOOL isTaggedPointer(const void * _Nullable ptr) {
     return _objc_isTaggedPointer(ptr);
 }
