@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4B64AEDD22BFAEFC0078C63B /* objc-internal.h in Resources */ = {isa = PBXBuildFile; fileRef = 4B64AEDC22BFAEFC0078C63B /* objc-internal.h */; };
+		4B64AEE122BFC4200078C63B /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B64AEE022BFC4200078C63B /* TestHelper.m */; };
 		4B9A4C9022BA6F22005F29FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A4C8F22BA6F22005F29FF /* AppDelegate.m */; };
 		4B9A4C9322BA6F22005F29FF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A4C9222BA6F22005F29FF /* ViewController.m */; };
 		4B9A4C9622BA6F22005F29FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9A4C9422BA6F22005F29FF /* Main.storyboard */; };
@@ -56,6 +57,8 @@
 /* Begin PBXFileReference section */
 		4B64AEDC22BFAEFC0078C63B /* objc-internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "objc-internal.h"; sourceTree = "<group>"; };
 		4B64AEDE22BFB5940078C63B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4B64AEDF22BFC4200078C63B /* TestHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestHelper.h; sourceTree = "<group>"; };
+		4B64AEE022BFC4200078C63B /* TestHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestHelper.m; sourceTree = "<group>"; };
 		4B9A4C8B22BA6F22005F29FF /* StringMemory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StringMemory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9A4C8E22BA6F22005F29FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4B9A4C8F22BA6F22005F29FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				4B9A4CA722BA6F23005F29FF /* StringMemoryTests.m */,
+				4B64AEDF22BFC4200078C63B /* TestHelper.h */,
+				4B64AEE022BFC4200078C63B /* TestHelper.m */,
 				4B9A4CA922BA6F23005F29FF /* Info.plist */,
 			);
 			path = StringMemoryTests;
@@ -334,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B9A4CA822BA6F23005F29FF /* StringMemoryTests.m in Sources */,
+				4B64AEE122BFC4200078C63B /* TestHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
