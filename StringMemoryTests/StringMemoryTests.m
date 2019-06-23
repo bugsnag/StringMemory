@@ -46,7 +46,7 @@
 }
 
 NSString *pointerPattern = @"0x[0-9a-f]{9}";
-NSString *taggedPointerPattern = @"0x[0-9a-f]{16}";
+NSString *taggedPointerPattern = @"0x[0-9a-f]{14,16}";
 
 - (void)testExploreTaggedPointer {
     // Example from: https://www.mikeash.com/pyblog/friday-qa-2015-07-31-tagged-pointer-strings.html
